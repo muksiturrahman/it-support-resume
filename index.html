@@ -246,26 +246,26 @@
     </header>
 
     <section class="section">
+      <div class="section-title">Online Profiles</div>
+      <div class="quick-links">
+        <a href="https://portfolio-1t8.pages.dev/" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+          <div class="ql-title">Portfolio and Projects</div>
+          <div class="ql-desc">Production mobile apps, full-stack projects, and AI-assisted development work.</div>
+          <div class="ql-url">portfolio-1t8.pages.dev</div>
+        </a>
+        <a id="resume-pdf-card" href="https://muksiturrahman.github.io/it-support-resume/Muksitur_Rahman_Rafi_IT_Support_Resume.pdf" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+          <div class="ql-title">View Resume PDF</div>
+          <div class="ql-desc">Download or view a clean PDF version of this resume.</div>
+          <div class="ql-url">Download PDF</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-title">Professional Summary</div>
       <p class="summary">
         Motivated software engineer looking to start a career in IT support. I have basic knowledge of hardware troubleshooting, operating system installation, Microsoft 365, and fundamental networking including Cisco switch concepts. While my professional background is in mobile and full-stack software development, I am eager to apply my problem-solving mindset, debugging experience, and ability to learn quickly to IT support and infrastructure roles. I am honest about being new to hands-on hardware work, but I am committed to growing through practical experience and continuous learning.
       </p>
-    </section>
-
-    <section class="section">
-      <div class="section-title">Online Profiles</div>
-      <div class="quick-links">
-        <a href="https://portfolio-1t8.pages.dev/" target="_blank" rel="noopener noreferrer" class="quick-link-card">
-          <div class="ql-title">Flutter Developer Portfolio</div>
-          <div class="ql-desc">Production mobile apps, full-stack projects, and AI-assisted development work.</div>
-          <div class="ql-url">portfolio-1t8.pages.dev</div>
-        </a>
-        <a href="https://muksiturrahman.github.io/it-support-resume/" target="_blank" rel="noopener noreferrer" class="quick-link-card">
-          <div class="ql-title">IT Support Resume</div>
-          <div class="ql-desc">This resume, hosted online. Link will be active after deployment.</div>
-          <div class="ql-url">muksiturrahman.github.io/it-support-resume</div>
-        </a>
-      </div>
     </section>
 
     <section class="section">
@@ -429,6 +429,16 @@
       <p style="font-size: 9.5pt;"><strong>Bangla:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Comfortable (Excellent reading & writing)</p>
     </section>
   </div>
+
+  <script>
+    // Hide the "View Resume PDF" card when the user is already viewing this HTML resume
+    if (window.location.href.includes('muksiturrahman.github.io/it-support-resume')) {
+      var resumeCard = document.getElementById('resume-pdf-card');
+      if (resumeCard) {
+        resumeCard.style.display = 'none';
+      }
+    }
+  </script>
 
 </body>
 </html>
