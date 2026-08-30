@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muksitur Rahman Rafi - IT Support Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.45;
+      color: #1f2937;
+      background: #fff;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 14mm 16mm;
+      margin: 0 auto;
+      background: #fff;
+      position: relative;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    header {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .name {
+      font-size: 24pt;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -0.5px;
+    }
+    .title {
+      font-size: 13pt;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 2px;
+    }
+    .contact {
+      margin-top: 6px;
+      font-size: 9.5pt;
+      color: #374151;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+    }
+    .contact span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .section {
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #111827;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+    .summary {
+      text-align: justify;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 18px;
+    }
+    .skill-category {
+      margin-bottom: 6px;
+    }
+    .skill-category h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #374151;
+      margin-bottom: 3px;
+    }
+    .skill-category p {
+      font-size: 9.5pt;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+    .job {
+      margin-bottom: 10px;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .job-title {
+      font-weight: 700;
+      font-size: 10.5pt;
+      color: #111827;
+    }
+    .job-company {
+      font-weight: 600;
+      color: #2563eb;
+    }
+    .job-period {
+      font-size: 9.5pt;
+      color: #6b7280;
+      font-style: italic;
+    }
+    .job-desc {
+      margin-top: 3px;
+      font-size: 9.5pt;
+      color: #374151;
+    }
+    .job ul {
+      margin-top: 3px;
+      margin-left: 16px;
+    }
+    .job li {
+      font-size: 9.5pt;
+      color: #374151;
+      margin-bottom: 2px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .education-item {
+      margin-bottom: 6px;
+    }
+    .degree {
+      font-weight: 700;
+      color: #111827;
+    }
+    .edu-meta {
+      font-size: 9.5pt;
+      color: #4b5563;
+    }
+    .highlight-box {
+      background: #eff6ff;
+      border-left: 3px solid #2563eb;
+      padding: 8px 10px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 10px;
+    }
+    .highlight-box p {
+      font-size: 9.5pt;
+      color: #1e40af;
+    }
+    .tag {
+      display: inline-block;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 2px 8px;
+      font-size: 8.5pt;
+      color: #374151;
+      margin: 2px 2px 2px 0;
+    }
+    .quick-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .quick-link-card {
+      display: block;
+      text-decoration: none;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 10px;
+      background: #f9fafb;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .quick-link-card:hover {
+      background: #eff6ff;
+      border-color: #2563eb;
+    }
+    .quick-link-card .ql-title {
+      font-weight: 700;
+      font-size: 10pt;
+      color: #111827;
+      margin-bottom: 2px;
+    }
+    .quick-link-card .ql-desc {
+      font-size: 9pt;
+      color: #4b5563;
+    }
+    .quick-link-card .ql-url {
+      font-size: 8.5pt;
+      color: #2563eb;
+      word-break: break-all;
+      margin-top: 4px;
+    }
+    .section-header-simple {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #111827;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    @media print {
+      .page {
+        margin: 0;
+        box-shadow: none;
+      }
+      .quick-link-card {
+        text-decoration: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1: IT SUPPORT FOCUS -->
+  <div class="page">
+    <header>
+      <div class="name">Muksitur Rahman Rafi</div>
+      <div class="title">IT Support Technician | Technical Support & Infrastructure</div>
+      <div class="contact">
+        <span>Dhaka, Bangladesh</span>
+        <span>|</span>
+        <span>+880 1734-128544</span>
+        <span>|</span>
+        <span>muksiturrahman00@gmail.com</span>
+        <span>|</span>
+        <span>linkedin.com/in/muksitur-rahman-rafi-5a90a0234</span>
+        <span>|</span>
+        <span>github.com/muksiturrahman</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-title">Professional Summary</div>
+      <p class="summary">
+        Motivated software engineer looking to start a career in IT support. I have basic knowledge of hardware troubleshooting, operating system installation, Microsoft 365, and fundamental networking including Cisco switch concepts. While my professional background is in mobile and full-stack software development, I am eager to apply my problem-solving mindset, debugging experience, and ability to learn quickly to IT support and infrastructure roles. I am honest about being new to hands-on hardware work, but I am committed to growing through practical experience and continuous learning.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Online Profiles</div>
+      <div class="quick-links">
+        <a href="https://portfolio-1t8.pages.dev/" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+          <div class="ql-title">Flutter Developer Portfolio</div>
+          <div class="ql-desc">Production mobile apps, full-stack projects, and AI-assisted development work.</div>
+          <div class="ql-url">portfolio-1t8.pages.dev</div>
+        </a>
+        <a href="https://muksiturrahman.github.io/it-support-resume/" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+          <div class="ql-title">IT Support Resume</div>
+          <div class="ql-desc">This resume, hosted online. Link will be active after deployment.</div>
+          <div class="ql-url">muksiturrahman.github.io/it-support-resume</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">IT Support Skills & Technical Competencies</div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Hardware & Infrastructure Support (Basic)</h4>
+          <p>Basic PC/laptop troubleshooting, printer & peripheral setup, understanding of hardware components, hardware refurbishment concepts, spare-parts inventory awareness. Open to deepening hands-on hardware skills.</p>
+        </div>
+        <div class="skill-category">
+          <h4>Operating Systems & Software Deployment</h4>
+          <p>Basic Windows installation & configuration, OS update concepts, antivirus & security update awareness, software installation, driver setup, and command-line familiarity.</p>
+        </div>
+        <div class="skill-category">
+          <h4>Helpdesk & User Support</h4>
+          <p>Basic understanding of end-user support, ticket handling, remote assistance tools, clear technical communication, and documentation for incident tracking.</p>
+        </div>
+        <div class="skill-category">
+          <h4>IT Asset & Lifecycle Management</h4>
+          <p>Basic knowledge of hardware inventory tracking, asset assignment logs, preventive maintenance ideas, power-saving practices, and resource reuse concepts.</p>
+        </div>
+        <div class="skill-category">
+          <h4>Microsoft 365 & Cloud Services</h4>
+          <p>Familiar with Microsoft 365 apps (Outlook, Teams, OneDrive), cloud collaboration basics, user account concepts, and hybrid learning support tools.</p>
+        </div>
+        <div class="skill-category">
+          <h4>Networking & Cisco Switch Basics</h4>
+          <p>Basic understanding of TCP/IP, DHCP/DNS, VLAN concepts, Cisco IOS CLI introduction, switch port configuration fundamentals, trunking awareness, and basic connectivity troubleshooting.</p>
+        </div>
+      </div>
+      <div style="margin-top: 8px;">
+        <span class="tag">Technical Troubleshooting</span>
+        <span class="tag">System Maintenance (Basic)</span>
+        <span class="tag">IT Documentation</span>
+        <span class="tag">Incident Reporting</span>
+        <span class="tag">Microsoft 365</span>
+        <span class="tag">Cisco Switch Basics</span>
+        <span class="tag">Git & GitHub</span>
+        <span class="tag">Postman / API Testing</span>
+        <span class="tag">VS Code / Android Studio</span>
+        <span class="tag">Command Line</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Key IT Support Responsibilities (Learning Focus)</div>
+      <div class="highlight-box">
+        <p><strong>Areas I am ready to learn and contribute in:</strong> Technical support & troubleshooting, hardware maintenance, IT asset management, system updates & OS deployment, IT helpdesk & user support, hardware refurbishment, preventive maintenance, IT infrastructure power management, scrap & spare-parts utilization, Microsoft 365 & cloud optimization, hybrid learning support, device management, digital process improvement, and daily IT operations reporting.</p>
+      </div>
+      <ul style="margin-left: 16px; font-size: 9.5pt; color: #374151;">
+        <li>Assist with diagnosis, repair, installation, and configuration of IT hardware and software under guidance.</li>
+        <li>Help maintain logs of hardware states, user assignments, and service incidents.</li>
+        <li>Support deployment of OS patches, antivirus updates, and institutional software.</li>
+        <li>Learn and apply preventive maintenance routines and power-saving protocols.</li>
+        <li>Support hybrid learning and remote collaboration tools for staff and students.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Education</div>
+      <div class="education-item">
+        <div class="degree">BSc in Software Engineering</div>
+        <div class="edu-meta">Daffodil International University | 2019 – 2023 | CGPA: 3.15 / 4.00</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Languages</div>
+      <p style="font-size: 9.5pt;"><strong>Bangla:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Comfortable (Excellent reading & writing)</p>
+    </section>
+  </div>
+
+  <!-- PAGE 2: FLUTTER / SOFTWARE ENGINEERING BACKGROUND -->
+  <div class="page page-break">
+    <div class="section-header-simple">Software Engineering Background — Mobile & Full-Stack Development</div>
+
+    <section class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><span class="job-title">Flutter Developer</span> — <span class="job-company">Potential Inc</span></div>
+          <div class="job-period">July 2024 – Present | Remote</div>
+        </div>
+        <div class="job-desc">Building and maintaining production Flutter, React Native, and full-stack applications across social, healthcare, IoT, commerce, and communication domains.</div>
+        <ul>
+          <li>Deployed multiple apps end-to-end to App Store and Google Play Store.</li>
+          <li>Built real-time communication platforms using WebSocket, Socket.io, and Node.js backends.</li>
+          <li>Integrated payment systems (Toss, RevenueCat), subscription management, deep linking, push notifications (FCM/APNS), and OTA updates (Shorebird).</li>
+          <li>Established AI-assisted development workflows and CI/CD pipelines across projects.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><span class="job-title">Software Engineer (Contractual)</span> — <span class="job-company">AKK Systems</span></div>
+          <div class="job-period">May 2024 – August 2024 | Dhaka, Bangladesh</div>
+        </div>
+        <div class="job-desc">Built ERP system modules for multiple product-based companies in Bangladesh.</div>
+        <ul>
+          <li>Developed HRM and Tech modules for the EBS365 ERP system.</li>
+          <li>Delivered MVC-patterned Flutter solutions for enterprise workflows.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><span class="job-title">Junior Software Engineer</span> — <span class="job-company">Orangebd</span></div>
+          <div class="job-period">August 2023 – March 2024 | Dhaka, Bangladesh</div>
+        </div>
+        <div class="job-desc">Built and shipped production Flutter applications including news platforms and school management systems.</div>
+        <ul>
+          <li>Developed <strong>Kalbela Bangla News Paper</strong> app with live streaming, story views, video playback, and e-paper.</li>
+          <li>Built <strong>Bangladesh Journal</strong> news app with dynamic content loading.</li>
+          <li>Created <strong>EMASBD</strong> school management system with attendance tracking and material distribution.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><span class="job-title">Software Engineer Apprentice</span> — <span class="job-company">GrapView</span></div>
+          <div class="job-period">January 2023 – July 2023 | Dhaka, Bangladesh</div>
+        </div>
+        <div class="job-desc">Developed Flutter apps for e-commerce and internal employee management.</div>
+        <ul>
+          <li>Built <strong>GrapMart</strong> e-commerce app and published it on Google Play Store.</li>
+          <li>Developed <strong>GrapView Attendance</strong> app for employee check-in/out and attendance history.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Notable Projects</div>
+      <div class="two-col">
+        <div>
+          <div class="job-title" style="font-size: 10pt;">Hacamong</div>
+          <p class="job-desc">Parent-nanny platform with real-time booking, Toss payments, Apple/Kakao SSO, and live chat.</p>
+        </div>
+        <div>
+          <div class="job-title" style="font-size: 10pt;">TOMO</div>
+          <p class="job-desc">Social media platform with group chat, events, likes/comments/shares, and real-time engagement.</p>
+        </div>
+        <div>
+          <div class="job-title" style="font-size: 10pt;">Health Durumi</div>
+          <p class="job-desc">Healthcare/rehab platform with patient-coach tracking, WebView integration, and role-based access.</p>
+        </div>
+        <div>
+          <div class="job-title" style="font-size: 10pt;">Nooly (Blink)</div>
+          <p class="job-desc">Full-stack real-time communication platform with admin dashboard, Docker deployment, and notifications.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Core Software Engineering Skills</div>
+      <div style="font-size: 9.5pt; color: #374151;">
+        <p style="margin-bottom: 5px;"><strong>Mobile Development:</strong> Flutter, Dart, React Native, Firebase, REST APIs, WebSocket, BLoC/Cubit, GetX, Clean Architecture, MVC, GoRouter, local databases (sqflite, Hive, Realm).</p>
+        <p style="margin-bottom: 5px;"><strong>Full-Stack & Tools:</strong> React, TypeScript, NestJS, Node.js, PostgreSQL, Redis, Docker, Git/GitHub, Postman, Figma, VS Code, Android Studio, Xcode, CI/CD pipelines.</p>
+        <p><strong>Soft Skills:</strong> Problem-solving, analytical thinking, clear technical communication, cross-functional collaboration, documentation, and user empathy.</p>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
